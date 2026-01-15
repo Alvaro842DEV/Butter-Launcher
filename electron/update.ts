@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 
 // CONFIGURA TU REPO Y NOMBRE DE RELEASE
-const GITHUB_API = "https://api.github.com/repos/<OWNER>/<REPO>/releases/latest";
+const GITHUB_API = "https://api.github.com/repos/vZylev/Butter-Launcher/releases/latest";
 const EXE_NAME = "ButterLauncher.exe"; // Cambia por el nombre real de tu exe
 const USER_AGENT = "ButterLauncher-Updater";
 

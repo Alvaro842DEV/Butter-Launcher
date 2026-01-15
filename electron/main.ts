@@ -2,7 +2,6 @@ import { app, BrowserWindow, ipcMain } from "electron";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs";
-import { autoUpdater } from "electron-updater";
 
 import { downloadGame } from "./game/download";
 import { checkGameInstallation } from "./game/check";
@@ -25,16 +24,6 @@ process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL
   : RENDERER_DIST;
 
 let win: BrowserWindow | null = null;
-
-autoUpdater.autoDownload = true;
-
-autoUpdater.on("update-available", () => {
-  win?.webContents.send("update-available");
-});
-
-autoUpdater.on("update-downloaded", () => {
-  win?.webContents.send("update-downloaded");
-});
 
 function createWindow() {
   win = new BrowserWindow({
@@ -61,7 +50,6 @@ app.whenReady().then(() => {
   createWindow();
 
   if (!VITE_DEV_SERVER_URL) {
-    autoUpdater.checkForUpdatesAndNotify();
   }
 });
 

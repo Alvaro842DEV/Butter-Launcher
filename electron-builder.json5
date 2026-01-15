@@ -17,7 +17,7 @@
     "target": [
       "dmg"
     ],
-    "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
+    "artifactName": "ButterLauncher.${ext}"
   },
   "win": {
     "target": [
@@ -28,7 +28,7 @@
         ]
       }
     ],
-    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+    "artifactName": "ButterLauncher.${ext}"
   },
   "nsis": {
     "oneClick": false,
@@ -44,7 +44,7 @@
       "snap",
       "tar.gz"
     ],
-    "artifactName": "${productName}-Linux-${version}.${ext}"
+    "artifactName": "ButterLauncher.${ext}"
     "category": "Game"
   }
 }
